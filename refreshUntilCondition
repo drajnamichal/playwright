@@ -5,7 +5,7 @@ await registrationPage.clickSendSms();
         async () => {
           await smsPage.reload();
           const sms = smsPage.locator(
-            '//td[contains(string(),"seconds ago")]/preceding-sibling::td[contains(string(),"Vas overovaci kod:")]'
+            '//td[contains(string(),"Vas overovaci kod:")]'
           );
           return sms.isVisible();
         },
